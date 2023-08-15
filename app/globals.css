@@ -25,3 +25,21 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@layer base {
+  .superflex {
+    @apply flex justify-center items-center;
+  }
+  .tr-100 {
+    @apply transition-all duration-100;
+  }
+  .tr-300 {
+    @apply transition-all duration-300;
+  }
+  .tr-500 {
+    @apply transition-all duration-500;
+  }
+  .tr-700 {
+    @apply transition-all duration-700;
+  }
+}
