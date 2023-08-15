@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  .center {
+    @apply top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+  }
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -24,22 +30,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
-
-@layer base {
-  .superflex {
-    @apply flex justify-center items-center;
-  }
-  .tr-100 {
-    @apply transition-all duration-100;
-  }
-  .tr-300 {
-    @apply transition-all duration-300;
-  }
-  .tr-500 {
-    @apply transition-all duration-500;
-  }
-  .tr-700 {
-    @apply transition-all duration-700;
-  }
 }
