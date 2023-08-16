@@ -7,8 +7,8 @@ export default function CanvasComponent(): any {
 
   return (
     <>
-      <Canvas>
-        <ambientLight intensity={1.5} />
+      <Canvas className="cursor-pointer bg-white">
+        <ambientLight intensity={2.5} />
         <OrbitControls />
         <primitive object={ball.scene}/>
         

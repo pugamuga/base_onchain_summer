@@ -1,6 +1,11 @@
 "use client";
 
 export default function Navbar() {
+  const buttons = [
+    { name: "Home", link: "/", active: true },
+    { name: "About", link: "/about", active: false },
+    { name: "Metrics", link: "/metrics", active: false },
+  ];
   return (
     <>
       <div className="flex justify-center">
@@ -12,10 +17,20 @@ export default function Navbar() {
               <p className="-mt-2">Vibes</p>
             </div>
           </div>
-          <div className="space-x-4">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Metrics</a>
+          <div className="space-x-6">
+            {buttons.map((button, i) => (
+              <a
+                key={i}
+                href={button.link}
+                className={`${
+                  button.active
+                    ? "border-b-4 border-violet-500"
+                    : ""
+                }`}
+              >
+                {button.name}
+              </a>
+            ))}
           </div>
           <div>
             <button className="bg-violet-800 rounded-md px-6 py-2 ">

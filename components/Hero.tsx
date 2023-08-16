@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
-import Lottie from "lottie-react";
-import animationData from "../public/baseAnimation.json";
+import LottieAnimation from "./LottieAnimation";
 
 const navigation = [
   { name: "Product", href: "#" },
@@ -15,9 +14,7 @@ export default function Example() {
 
   return (
     <div className="">
-      <div className="sm:w-2/3 w-[60vh] absolute z-[-10] center">
-        <Lottie animationData={animationData} />
-      </div>
+      <LottieAnimation/>
       <div
         className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
         aria-hidden="true"
@@ -30,27 +27,8 @@ export default function Example() {
           }}
         />
       </div>
-      <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-        <div className="text-center relative">
-          <img
-            src="/wood.png"
-            alt="brush"
-            className="absolute top-[-88px] scale-y-[50%] "
-          />
-          <h1 className="text-4xl tracking-tight text-white drop-shadow-lg sm:text-7xl font-lilita">
-            Summer Vibes NFT
-          </h1>
-
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a
-              href="#"
-              className="rounded-md bg-violet-800 tr-100  font-lilita px-12 py-4 text-[20px] shadow-md hover:scale-105 font-semibold text-white shadow-sm hover:bg-purple-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-              Mint NFT
-            </a>
-          </div>
-        </div>
-      </div>
+      <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56"/>
+        
       <div
         className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
         aria-hidden="true"

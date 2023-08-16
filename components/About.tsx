@@ -124,7 +124,7 @@ export default function About() {
             <div className="lg:col-span-6">
               <div className="relative">
                 {/* <!-- Tab Content --> */}
-                <div className="border rounded-md h-[600px]">
+                <div className=" h-[600px]">
                   <Canvas />
                 </div>
                 {/* <!-- End Tab Content --> */}

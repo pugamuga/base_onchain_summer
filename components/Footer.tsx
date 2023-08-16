@@ -3,7 +3,10 @@
 export default function Footer() {
   return (
     <>
-      <footer className="mt-auto w-full max-w-[85rem] py-6 px-4 sm:px-6 lg:px-8 mx-auto">
+      <footer className="mt-auto w-full max-w-[85rem] py-6 px-4 sm:px-6 lg:px-8 mx-auto relative">
+        <div className=" absolute bottom-0 transform left-1/2 -translate-x-1/2 -z-10 w-1/3 flex justify-end">
+          <img src="/umbrella.png" alt="" className="w-[170px] " />
+        </div>
         <div className="text-center">
           <div>
             <a
@@ -11,24 +14,21 @@ export default function Footer() {
               href="#"
               aria-label="Brand"
             >
-              Brand
+              Summer Vibe NFT
             </a>
           </div>
 
           <div className="mt-3">
             <p className="text-gray-500">
-              Were part of the{" "}
+              Created with love for {""}
               <a
-                className="font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-500 dark:hover:text-blue-400"
-                href="#"
+                href="https://prop.house/base/onchain-summer"
+                className="text-violet-300"
               >
-                Htmlstream
-              </a>{" "}
-              family.
+                Onchain Summer 2023.
+              </a>
             </p>
-            <p className="text-gray-500">
-              © Preline. 2022 Htmlstream. All rights reserved.
-            </p>
+            <p className="text-gray-500">© Pugamuga</p>
           </div>
           <div className="mt-3 space-x-2">
             <a
