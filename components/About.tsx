@@ -5,7 +5,7 @@ export default function About() {
   return (
     <>
       {/* <!-- Features --> */}
-      <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto ">
+      <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto w-2/3">
         <div className="relative p-6 md:p-16">
           {/* <!-- Grid --> */}
           <div className="relative z-10 lg:grid lg:grid-cols-12 lg:gap-16 lg:items-center">

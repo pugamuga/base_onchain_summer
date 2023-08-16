@@ -22,6 +22,7 @@ export default function Footer() {
             <p className="text-gray-500">
               Created with love for {""}
               <a
+                target="_blank"
                 href="https://prop.house/base/onchain-summer"
                 className="text-violet-300"
               >
