@@ -5,7 +5,7 @@ import CardCarousel from "./CardCarousel";
 
 export default function DefaultCarousel() {
   return (
-    <div className="w-1/2 h-[50vh] center z-0 ">
+    <div className="w-1/2 h-[50vh] center z-50 ">
       <Carousel  >
         <CardCarousel />
         <CardCarousel />
