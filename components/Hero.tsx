@@ -13,8 +13,11 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="">
-      <LottieAnimation/>
+    <div className="bg-white/10 ">
+      <div className="w-full justify-center flex pt-[10vh]">
+        <LottieAnimation />
+      </div>
+      {/* shines */}
       <div
         className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
         aria-hidden="true"
@@ -27,8 +30,7 @@ export default function Example() {
           }}
         />
       </div>
-      <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56"/>
-        
+      <div className="mx-auto max-w-2xl pt-32 sm:pt-48 lg:pt-56" />
       <div
         className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
         aria-hidden="true"
@@ -41,6 +43,7 @@ export default function Example() {
           }}
         />
       </div>
+      {/* shines end */}
     </div>
   );
 }
