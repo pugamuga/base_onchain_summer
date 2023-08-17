@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import LottieAnimation from "./LottieAnimation";
+import WordsAnim from "./WordsAnim";
 
 const navigation = [
   { name: "Product", href: "#" },
@@ -13,9 +14,11 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="bg-white/10 ">
-      <div className="w-full justify-center flex pt-[10vh]">
+    <>
+      <div className="w-full justify-center flex flex-col items-center pt-[10vh]">
         <LottieAnimation />
+        <div className="mt-[100px]"/>
+        <WordsAnim />
       </div>
       {/* shines */}
       <div
@@ -30,7 +33,7 @@ export default function Example() {
           }}
         />
       </div>
-      <div className="mx-auto max-w-2xl pt-32 sm:pt-48 lg:pt-56" />
+      <div className="mx-auto max-w-2xl mt-32 sm:mt-48 lg:mt-56" />
       <div
         className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
         aria-hidden="true"
@@ -44,6 +47,6 @@ export default function Example() {
         />
       </div>
       {/* shines end */}
-    </div>
+    </>
   );
 }

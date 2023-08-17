@@ -19,6 +19,6 @@ const config: Config = {
       lilita: ["Lilita One", "cursive"],
     },
   },
-  plugins: [require("tailwind-scrollbar-hide"), require("tailwind-scrollbar")],
+  plugins: [require("tailwind-scrollbar-hide"), require("tailwind-scrollbar"),require('flowbite/plugin')],
 };
 export default config;

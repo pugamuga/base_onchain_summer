@@ -1,5 +1,5 @@
 import Lottie from "lottie-react";
-import animationData from "../public/data.json";
+import animationData from "../public/animHero/baseAnimation.json";
 
 export default function LottieAnimation() {
   return (

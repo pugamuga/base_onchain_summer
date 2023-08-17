@@ -10,11 +10,11 @@ export default function Footer() {
         <div className="text-center">
           <div>
             <a
-              className="flex-none text-xl font-semibold text-black dark:text-white"
+              className="flex-none text-xl  text-white font-lilita"
               href="#"
               aria-label="Brand"
             >
-              Summer Vibe NFT
+              Summer Vibes NFT
             </a>
           </div>
 
