@@ -1,7 +1,6 @@
 "use client";
 
 import { use, useEffect, useRef, useState } from "react";
-import { motion as m, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [button, setButton] = useState(1);
@@ -29,9 +28,15 @@ export default function Navbar() {
       <div
         className={`flex justify-center fixed top-0 left-0 w-full z-[10000] `}
       >
-        <section className={`flex justify-between items-center w-2/3 text-white py-4 font-lilita text-xl tr-700 
-         bg-black/0 px-6 rounded-br-lg border-b-4 border-r-4 border-l-4 rounded-bl-lg ${scrollNav?"bg-black/30 backdrop-blur-sm border-white/20":"backdrop-blur-none border-white/0"}`}>
-          <a className="flex items-center cursor-pointer" href="/"  >
+        <section
+          className={`flex justify-between items-center w-2/3 text-white py-4 font-lilita text-xl tr-700 
+         bg-black/0 px-6 rounded-br-lg border-b-4 border-r-4 border-l-4 rounded-bl-lg ${
+           scrollNav
+             ? "bg-black/30 backdrop-blur-sm border-white/20"
+             : "backdrop-blur-none border-white/0"
+         }`}
+        >
+          <a className="flex items-center cursor-pointer" href="/">
             <img src="/logo_sun_white.png" alt="" className="w-12" />
             <div className="pl-2 font-base">
               <p>Summer</p>
