@@ -12,7 +12,7 @@ export default function BallAnimation() {
             className="pointer-events-none"
           />
         </div>
-        <div className="cursor-pointer">
+        <div className="">
           <Carousel />
         </div>
       </div>
