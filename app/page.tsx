@@ -5,11 +5,13 @@ import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import BallAnimation from "../components/BallAnimation";
 import { ethers } from "ethers";
+import { useState } from "react";
 //zora
 import mainnetZoraAddresses from "@zoralabs/v3/dist/addresses/1.json"; // Mainnet addresses, 5.json would be Geroli Testnet 
 import { IERC721__factory } from "@zoralabs/v3/dist/typechain/factories/IERC721__factory";
 
 export default function Home() {
+  const [isConnected, setIsConnected] = useState(false);
   async function connectToMetaMask() {
     // @ts-ignore
     if (window.ethereum) {
@@ -32,6 +34,7 @@ export default function Home() {
     const provider = await connectToMetaMask();
     if (provider) {
       //mint fn
+      setIsConnected(true);
     }
   };
   const mintClick = async () => {
@@ -48,7 +51,7 @@ export default function Home() {
       <main className="flex  flex-col items-center  ">
         <div className="fixed w-screen h-screen bg-violet-300/10 -z-50" />
         <div className="w-full space-y-6">
-          <Navbar handleConnectClick={handleConnectClick}/>
+          <Navbar isConnected={isConnected} handleConnectClick={handleConnectClick}/>
           <Hero />
           {/* <button className="button-main " onClick={mintClick}>
             TEST

@@ -3,10 +3,9 @@
 import { use, useEffect, useRef, useState } from "react";
 import { Link } from "react-scroll";
 
-export default function Navbar({ handleConnectClick,handleDisconnect }: any) {
+export default function Navbar({ isConnected, handleConnectClick }: any) {
   const [button, setButton] = useState(1);
   const [scrollNav, setScrollNav] = useState(false);
-  const [isConnect, setIsConnect] = useState(false);
 
   const changeNav = () => {
     if (window.scrollY > 0) {
@@ -16,7 +15,7 @@ export default function Navbar({ handleConnectClick,handleDisconnect }: any) {
     }
   };
 
-   useEffect(() => {
+  useEffect(() => {
     window.addEventListener("scroll", changeNav);
   }, []);
 
@@ -86,10 +85,9 @@ export default function Navbar({ handleConnectClick,handleDisconnect }: any) {
               onClick={handleConnectClick}
               className="bg-violet-800 relative rounded-md px-6 py-2 hover:bg-violet-900 tr-300 cursor-pointer"
             >
-              {/* @ts-ignore */}
-              {window.ethereum.selectedAddress
+              {isConnected
                 ? //@ts-ignore
-                shortenEthAddress(window.ethereum.selectedAddress, 2)
+                  shortenEthAddress(window?.ethereum?.selectedAddress, 2)
                 : "Connect"}
             </div>
           </div>
