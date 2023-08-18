@@ -14,7 +14,7 @@ export default function LoaderPage() {
         className="text-white h-screen w-screen bg-black fixed z-[999900]"
       >
         <div className="w-full h-full flex justify-center items-center">
-          <div className="w-64 h-64">
+          <div className="w-[144px] h-[144px]">
             <Lottie animationData={animationData} loop={false} />
           </div>
         </div>

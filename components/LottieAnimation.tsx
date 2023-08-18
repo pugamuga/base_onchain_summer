@@ -7,20 +7,31 @@ export default function LottieAnimation() {
       <div className="sm:w-2/3 w-[60vh] relative">
         <Lottie animationData={animationData} />
         <div className="center flex flex-col  mt-2">
-          <button className="button-main text-lg font-lilita text-white mb-2">
+          <button className="button-main text-2xl font-lilita text-white mb-2">
             Mint
           </button>
-          <a
-            href="/"
-            target="_blank"
-            className="font-lilita border-2 border-purple-800 rounded-md px-2 opacity-50 
-          cursor-pointer hover:opacity-100 tr-300
-          "
-          >
-            Or check collection on <span className="text-purple-800">mint.fun</span>
-          </a>
+          <div className="flex space-x-4 justify-center">
+            <ButtonLink>
+              <img src="./mintfun.png" alt="" className="w-8" />
+            </ButtonLink>
+            <ButtonLink>
+              <img src="./zora.png" alt="" className="w-8" />
+            </ButtonLink>
+          </div>
         </div>
       </div>
     </>
+  );
+}
+
+function ButtonLink({ children }: any) {
+  return (
+    <a
+      className="hover:scale-110 cursor-pointer tr-300 opacity-50 hover:opacity-100"
+      href="https://github.com/pugamuga/base_onchain_summer"
+      target="_blank"
+    >
+      {children}
+    </a>
   );
 }
