@@ -19,7 +19,7 @@ export default function Example() {
 
   return (
     <>
-      <div className="w-full justify-center flex flex-col items-center pt-[10vh]">
+      <div className="w-full justify-center flex flex-col items-center pt-[10vh]" id="home">
         <LottieAnimation />
         <div className="mt-[100px]"/>
         <WordsAnim />

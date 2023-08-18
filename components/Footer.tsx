@@ -3,7 +3,7 @@
 export default function Footer() {
   return (
     <>
-      <footer className="mt-auto w-full max-w-[85rem] py-6 px-4 sm:px-6 lg:px-8 mx-auto relative">
+      <footer className="mt-auto w-full max-w-[85rem] py-6 px-4 sm:px-6 lg:px-8 mx-auto relative" id="contact">
         <div className=" absolute bottom-0 transform left-1/2 -translate-x-1/2 -z-10 w-1/3 flex justify-end">
           <img src="/umbrella.png" alt="" className="w-[170px] " />
         </div>
@@ -34,7 +34,7 @@ export default function Footer() {
           <div className="mt-3 space-x-2">
             <a
               className="inline-flex justify-center items-center w-10 h-10 text-center text-gray-500 hover:bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition dark:text-gray-500 dark:hover:text-gray-200 dark:hover:bg-gray-800"
-              href="#"
+              href="mailto:cyprus.pugamuga@gmail.com"
             >
               <svg
                 className="w-3.5 h-3.5"

@@ -40,7 +40,7 @@ export default function RootLayout({
 
   return (
     <head>
-      <link rel="icon" href="./logo_sun_white.ico" sizes="any" />
+      <link rel="icon" href="./logo_sun_black.ico" sizes="any" />
       <title>Summer Vibes</title>
       <html lang="en">
         <body>

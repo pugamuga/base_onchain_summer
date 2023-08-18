@@ -1,6 +1,7 @@
 "use client";
 
 import { use, useEffect, useRef, useState } from "react";
+import { Link } from "react-scroll";
 
 export default function Navbar() {
   const [button, setButton] = useState(1);
@@ -19,9 +20,9 @@ export default function Navbar() {
   }, []);
 
   const buttons = [
-    { name: "Home", link: "/", active: button === 1 },
-    { name: "About", link: "/about", active: button === 2 },
-    { name: "Contact", link: "/contact", active: button === 3 },
+    { name: "Home", link: "home", active: button === 1 },
+    { name: "About", link: "about", active: button === 2 },
+    { name: "Contact", link: "contact", active: button === 3 },
   ];
   return (
     <>
@@ -45,17 +46,22 @@ export default function Navbar() {
           </a>
           <div className="space-x-6 hidden  md:inline-block">
             {buttons.map((button, i) => (
-              <button
+              <Link
+                to={button.link}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
                 key={i}
                 onClick={() => setButton(i + 1)}
-                className={`tr-300 hover:opacity-70  ${
+                className={`tr-300 hover:opacity-70 cursor-pointer select-none ${
                   button.active
                     ? "border-b-2 border-violet-500"
                     : "border-b-2 border-violet-500/0"
                 }`}
               >
                 {button.name}
-              </button>
+              </Link>
             ))}
           </div>
           <div>
