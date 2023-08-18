@@ -12,7 +12,7 @@ const navigation = [
   { name: "Company", href: "#" },
 ];
 
-export default function Example({handleConnectClick}:any) {
+export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   
@@ -20,7 +20,7 @@ export default function Example({handleConnectClick}:any) {
   return (
     <>
       <div className="w-full justify-center flex flex-col items-center pt-[10vh]" id="home">
-        <LottieAnimation handleConnectClick={handleConnectClick}/>
+        <LottieAnimation />
         <div className="mt-[100px]"/>
         <WordsAnim />
       </div>

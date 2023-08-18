@@ -3,9 +3,10 @@
 import { use, useEffect, useRef, useState } from "react";
 import { Link } from "react-scroll";
 
-export default function Navbar() {
+export default function Navbar({ handleConnectClick,handleDisconnect }: any) {
   const [button, setButton] = useState(1);
   const [scrollNav, setScrollNav] = useState(false);
+  const [isConnect, setIsConnect] = useState(false);
 
   const changeNav = () => {
     if (window.scrollY > 0) {
@@ -15,7 +16,7 @@ export default function Navbar() {
     }
   };
 
-  useEffect(() => {
+   useEffect(() => {
     window.addEventListener("scroll", changeNav);
   }, []);
 
@@ -24,6 +25,22 @@ export default function Navbar() {
     { name: "About", link: "about", active: button === 2 },
     { name: "Contact", link: "contact", active: button === 3 },
   ];
+
+  function shortenEthAddress(
+    address: string,
+    prefixLength = 6,
+    suffixLength = 3
+  ) {
+    if (address.length < prefixLength + suffixLength + 2) {
+      return address; // Return the full address if it's too short to shorten
+    }
+
+    const prefix = address.slice(0, prefixLength + 2);
+    const suffix = address.slice(-suffixLength);
+
+    return `${prefix}...${suffix}`;
+  }
+
   return (
     <>
       <div
@@ -65,9 +82,16 @@ export default function Navbar() {
             ))}
           </div>
           <div>
-            <button className="bg-violet-800 rounded-md px-6 py-2 hover:bg-violet-900 tr-300">
-              Connect
-            </button>
+            <div
+              onClick={handleConnectClick}
+              className="bg-violet-800 relative rounded-md px-6 py-2 hover:bg-violet-900 tr-300 cursor-pointer"
+            >
+              {/* @ts-ignore */}
+              {window.ethereum.selectedAddress
+                ? //@ts-ignore
+                shortenEthAddress(window.ethereum.selectedAddress, 2)
+                : "Connect"}
+            </div>
           </div>
         </section>
       </div>
