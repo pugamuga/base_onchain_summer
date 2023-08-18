@@ -1,26 +1,31 @@
 export default function Metrics() {
   return (
     <>
-      <div className=" font-lilita text-white flex justify-center items-center space-x-2">
-        <p className="text-[100px]">1</p>
-        <img src="./whiteLogo.png" alt="0" className="w-[80px] h-[80px]" />
+      <div className=" font-lilita text-white flex justify-center items-center">
         <img
-          src="./whiteLogo.png"
-          alt="0"
-          className="w-[80px] h-[80px] rotate-45"
+          src="./cards/1.png"
+          alt=""
+          className="w-32 rotate-[-12deg]  hover:scale-105 cursor-pointer tr-300"
         />
         <img
-          src="./whiteLogo.png"
-          alt="0"
-          className="w-[80px] h-[80px] rotate-90"
+          src="./cards/2.png"
+          alt=""
+          className="w-32 mb-8 hover:scale-105 cursor-pointer tr-300"
+        />
+        <img
+          src="./cards/3.png"
+          alt=""
+          className="w-32  rotate-[12deg]  hover:scale-105 cursor-pointer tr-300"
         />
       </div>
       <div>
         <p className=" text-2xl text-center font-lilita text-white">
-          Get one of 1,000 unique summer vibes NFTs!
+          Get one of 1,000 unique summer vibes NFT!
         </p>
-        <p className=" text-2xl text-center font-lilita text-white">
-          Mint yours for free to remember this summer.
+        <p className=" text-base text-center font-lilita text-white/50">
+          These memorable NFTs have been created exclusively for Onchain Summer
+          2023. Mint your summer BASE picture to commemorate this unforgettable
+          season!
         </p>
       </div>
     </>
