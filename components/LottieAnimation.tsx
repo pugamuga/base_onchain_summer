@@ -1,7 +1,7 @@
 import Lottie from "lottie-react";
 import animationData from "../public/animHero/baseAnimation.json";
 
-export default function LottieAnimation() {
+export default function LottieAnimation({ handleConnectClick }: any) {
   const zoraLink =
     "https://zora.co/collect/base:0xbad640dd4472fd98cbdc1b42a3f0663d901ba345";
   const mintFunLink =
@@ -11,7 +11,10 @@ export default function LottieAnimation() {
       <div className="sm:w-2/3 w-[60vh] relative">
         <Lottie animationData={animationData} />
         <div className="center flex flex-col  mt-2">
-          <button className="button-main text-2xl font-lilita text-white mb-2">
+          <button
+            onClick={handleConnectClick}
+            className="button-main text-2xl font-lilita text-white mb-2"
+          >
             Mint
           </button>
           <div className="flex space-x-4 justify-center">
